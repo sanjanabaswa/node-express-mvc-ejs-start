@@ -1,0 +1,48 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="puppy/create" class="btn btn-primary new">
+        Create a new puppy
+      </a>
+      <h2>Recent puppy entries</h2>
+      <p>There are
+        <%= puppies.query.length %> puppies.
+        <br>
+      </p>
+      <% for (var i = puppies.query.length-1; i >= 0; i--) {   
+        puppy = puppies.query[i];   %>
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="text-muted pull-right"></div>
+        <div class="panel-body">
+          ID: <%=  puppy._id %>
+          <br> Name: <%=puppy.name%>
+          <br> Breed: <%=puppy.breed%>
+          <br> Age (years): <%=puppy.age%>
+          <br>
+          <%=puppy.parents.length%> parents
+          <% for (let j = 0; j < puppy.parents.length; j++) { parent = puppy.parents[j]; %>
+          <div class="arrayItem"> Name:
+            <%= parent.parentName %>
+            <br>Breed:
+            <%= parent.parentBreed %>
+            <br>Age:
+            <%= parent.parentAge %>
+          </div>
+          <br>
+          <% } %>
+          <hr>
+          <a href="/puppy/delete/<%= puppy._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/puppy/details/<%= puppy._id %>" class="btn btn-info"> Details </a>
+          <a href="/puppy/edit/<%= puppy._id %>" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+
+      <h2>User details</h2>
+      <br>
+      <br> ID: <%=  User._id %>
+      <br> user_name: <%=User.user_name%>
+      <br> account_number: <%=User.account_number%>
+      <br> user_email: <%=User.user_email%>
+      <br> balance: <%=User.balance%>
+      <br> phone_number: <%=User.phone_number%>
+      <hr>
+
+      <form method="get" action="/User">
+        <input type="submit" value="Return to list" class="btn btn-caution" />
+      </form>
+
+    </div>
+  </div>
+</div>

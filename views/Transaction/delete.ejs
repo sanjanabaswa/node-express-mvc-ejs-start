@@ -1,0 +1,29 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+
+      <h2>Confirm deletion of Transaction</h2>
+      <br>
+      <br> ID: <%=  Transaction._id %>
+      <br> TransactionID: <%=Transaction.TransactionID%>
+      <br> email: <%=Transaction.email%>
+      <br> datePlaced: <%=Transaction.datePlaced%>
+      <br> dateShipped: <%=Transaction.dateShipped%>
+      <br> paymentType: <%=Transaction.paymentType%>
+      <br> amountDue: <%=Transaction.amountDue%>
+      <br> paid: <%=Transaction.paid %>
+      <hr>
+      
+      <form method="get" action="/Transaction">
+        <input type="submit" value="Return to list" class="btn btn-caution" />
+      </form>
+      
+      <form method="POST" action="/Transaction/delete/<%= Transaction._id %>">
+        <input type="submit" value="Delete this item" class="btn btn-danger pull-right" />
+      </form>
+
+    </div>
+  </div>
+</div>

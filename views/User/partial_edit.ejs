@@ -1,0 +1,85 @@
+<!-- main - a row holds columns -->
+<div class=row>
+  <div class="col col-xs-12">
+
+      
+
+    <div class="form-group">
+      <label for="user_name">user_name</label>
+      <input type="user_name" class="form-control" id="user_name" name="user_name" value="<%= User.user_name %>" required>
+    </div>
+
+    <div class="form-group">
+      <label for="account_number">account_number</label>
+      <input type="text" class="form-control" id="account_number" name="account_number" value="<%= User.account_number %>">
+    </div>
+
+    <div class="form-group">
+      <label for="user_email">user_email</label>
+      <input type="text" class="form-control" id="user_email" name="user_email" value="<%= User.user_email %>">
+    </div>
+
+    <div class="form-group">
+      <label for="balance">balance </label>
+      <input type="text" class="form-control" id="balance" name="balance" value="<%= User.balance %>">
+    </div>
+
+    <div class="form-group">
+      <label for="phone_number">phone_number </label>
+      <input type="text" class="form-control" id="phone_number" name="phone_number" value="<%= User.phone_number %>">
+    </div>
+
+    
+
+  </div>
+</div>
+
+<!-- PUT CLIENT SIDE CODE HERE -->
+<script>
+
+  // function toCurrency(amount) 
+
+  // https://gist.github.com/kylefox/780065
+  function toCurrency(amount) {
+    return "$" + amount.toFixed(2);
+  };
+
+  // function toCurrencyInt(amount) 
+  function toCurrencyInt(amount) {
+    return "$" + amount.toFixed(0);
+  };
+
+  // Add  .toCurrency() method to all Numbers
+  Number.prototype.toCurrency = function () {
+    return toCurrency(this);
+  };
+
+  // Add  .toCurrencyInt() method to all Numbers
+  Number.prototype.toCurrencyInt = function () {
+    return toCurrencyInt(this);
+  };
+
+  function onFormChange() {
+    const newAge = parseFloat($("input[name=age]").val());
+    let price = 75
+    if (newAge == 1) {
+      price = 100
+    }
+    $("#puppyCost").html(price.toCurrencyInt());
+  }
+
+  // window.onload = a function that will call all update functions to display calculated values
+  window.onload = function () {
+    onFormChange();
+  }
+
+  // prevent submission when hitting enter key - optional, but user-friendly 
+  document.forms[0].onkeypress = function (e) {
+    var key = e.charCode || e.keyCode || 0;
+    if (key == 13) {
+      e.preventDefault();
+    }
+  }
+
+// END CLIENT SIDE CODE  (close the script tag)
+</script>

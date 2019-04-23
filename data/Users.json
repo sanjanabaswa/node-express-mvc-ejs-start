@@ -1,0 +1,45 @@
+[
+  {
+  "_id": 1237,
+  "user_name": "Sanjana",
+  "account_number": 12345677,
+  "user_email": "sanjanabaswa@gmail.com",
+  "balance": 627182,
+  "phone_number": 46393772
+  
+},
+{
+  "_id": 1234,
+  "user_name": "vinusha",
+  "account_number": 73864889,
+  "user_email": "vinushareddy@gmail.com",
+  "balance": 289988,
+  "phone_number": 98615829
+},
+{
+  "_id": 1232,
+  "user_name": "Sravya",
+  "account_number": 927635187,
+  "user_email": "katpally@gmail.com",
+  "balance": 986517,
+  "phone_number": 7234629
+},
+{
+  "_id": 1235,
+  "user_name": "ganesh",
+  "account_number": 618288392,
+  "user_email": "siripuram@gmail.com",
+  "balance": 9715237,
+  "phone_number": 238991938
+},
+{
+  "_id": 1238,
+  "user_name": "Dheeraj",
+  "account_number": 8929291888,
+  "user_email": "dheerajkumar@gmail.com",
+  "balance": 8192026,
+  "phone_number": 345782927
+}
+]
+
+

@@ -1,0 +1,56 @@
+[
+  {
+    "_id": 1,
+    "name": "Lexie",
+    "breed": "Cavachon",
+    "age": 1,
+    "parents": [
+      {
+        "parentName": "Mom",
+        "parentBreed": "Bichon Frise",
+        "parentAge": 5
+      },
+      {
+        "parentName": "Dad",
+        "parentBreed": "Cavalier King Charles",
+        "parentAge": 6
+      }
+    ]
+  },
+  {
+    "_id": 2,
+    "name": "Eddie",
+    "breed": "Labrador",
+    "age": 12,
+    "parents": [
+      {
+        "parentName": "Bess",
+        "parentBreed": "Labrador",
+        "parentAge": 5
+      },
+      {
+        "parentName": "Chet",
+        "parentBreed": "Labrador",
+        "parentAge": 6
+      }
+    ]
+  },
+  {
+    "_id": 3,
+    "name": "Max",
+    "breed": "Beagle",
+    "age": 7,
+    "parents": [
+      {
+        "parentName": "Lassie",
+        "parentBreed": "Beagle",
+        "parentAge": 5
+      },
+      {
+        "parentName": "Sport",
+        "parentBreed": "Beagle",
+        "parentAge": 6
+      }
+    ]
+  }
+]

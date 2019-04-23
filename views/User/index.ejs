@@ -1,0 +1,51 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="User/create" class="btn btn-primary new">
+        Create a new User
+      </a>
+
+      <h2>Recent entries</h2>
+      <p>There are
+        <%= Users.query.length %> Users.
+        <br>
+      </p>
+      <% for (var i = Users.query.length-1; i >= 0; i--) {   
+        User = Users.query[i];   %>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="text-muted pull-right"></div>
+        <div class="panel-body">
+
+      <br> ID: <%=  User._id %>
+      <br> user_name: <%=User.user_name%>
+      <br> account_number: <%=User.account_number%>
+      <br> user_email: <%=User.user_email%>
+      <br> balance: <%=User.balance%>
+      <br> phone_number: <%=User.phone_number%>
+
+          <hr>
+          <a href="/User/delete/<%= User._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/User/details/<%= User._id %>" class="btn btn-info"> Details </a>
+          <a href="/User/edit/<%= User._id %>" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
